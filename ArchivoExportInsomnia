@@ -1,0 +1,181 @@
+type: collection.insomnia.rest/5.0
+name: Gets y Posts
+meta:
+  id: wrk_0ea6493aafaa495a998c6eed981c2422
+  created: 1763335610590
+  modified: 1763338449190
+  description: ""
+collection:
+  - name: Users
+    meta:
+      id: fld_097c270ae373405b945215e366fc0c4c
+      created: 1763335957979
+      modified: 1763335957979
+      sortKey: -1763335957979
+      description: ""
+    children:
+      - url: http://localhost:3000/users/
+        name: createUser
+        meta:
+          id: req_ae0264f3fa1242f9a9b5c0c6795c7244
+          created: 1763335610651
+          modified: 1763336418182
+          isPrivate: false
+          description: ""
+          sortKey: -1763335964025
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "name": "Juan Jose",
+                "email": "juanjose@hotmail.com"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/users/
+        name: getAllUsers
+        meta:
+          id: req_4e964f2e59b94904b13c4c79c93b1d2f
+          created: 1763335921299
+          modified: 1763336515450
+          isPrivate: false
+          description: ""
+          sortKey: -1763335963825
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/users/1
+        name: getUserById
+        meta:
+          id: req_6a88ccc2610b44cfbad6158dd8882919
+          created: 1763335944087
+          modified: 1763336599068
+          isPrivate: false
+          description: ""
+          sortKey: -1763335963925
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Tasks
+    meta:
+      id: fld_576b2b8147b14454aba9c31d37446fbc
+      created: 1763336021874
+      modified: 1763336021874
+      sortKey: -1763336021874
+      description: ""
+    children:
+      - url: http://localhost:3000/tasks/
+        name: getAllTasks
+        meta:
+          id: req_989301d39bd3433e9a63a8bfa5b5c27a
+          created: 1763335972196
+          modified: 1763337314198
+          isPrivate: false
+          description: ""
+          sortKey: -1763336024393
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/tasks/user/1
+        name: getTasksByUser
+        meta:
+          id: req_50c646079bdc4eda91f4efce89caf184
+          created: 1763335989249
+          modified: 1763337545352
+          isPrivate: false
+          description: ""
+          sortKey: -1763336024493
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/tasks/
+        name: createTask
+        meta:
+          id: req_8bc842062bc5468f8442c5a32662b4c9
+          created: 1763336003034
+          modified: 1763337361185
+          isPrivate: false
+          description: ""
+          sortKey: -1763336024593
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+                "title": "Tarea 4",
+                "userId": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_971475bfb2fa7dfa6fc80b999895cd60a21b7f52
+    created: 1763335610633
+    modified: 1763335610633
+environments:
+  name: Base Environment
+  meta:
+    id: env_971475bfb2fa7dfa6fc80b999895cd60a21b7f52
+    created: 1763335610610
+    modified: 1763335610610
+    isPrivate: false
